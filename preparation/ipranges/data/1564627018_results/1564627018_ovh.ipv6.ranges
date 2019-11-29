@@ -1,0 +1,7 @@
+2607:5300::/32,OVH,ovh,high
+2604:2dc0::/32,OVH,ovh,high
+2402:1f00::/32,OVH,ovh,high
+2402:1f00:8100::/40,OVH,ovh,high
+2402:1f00:8000::/40,OVH,ovh,high
+2001:41d0:fc00::/38,OVH,ovh,high
+2001:41d0::/32,OVH,ovh,high
