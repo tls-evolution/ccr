@@ -8,7 +8,7 @@ if [[ $# == 0 ]] || [[ "$1" == "--help" ]] || [[ "$1" == "-h" ]]; then
 fi
 
 for MONTH in $@; do
-# ADJUST to your pref:
+# ADJUST to your pref. You will find the files under ../../mappings
 MAPPING_DIR=/srv/tls13/experiment/analysis/deployment/per_zone_group/bin
 
 SCHEMA=`grep $MONTH $MAPPING_DIR/db_month_schema_mapping.csv | cut -f 2 -d,`
