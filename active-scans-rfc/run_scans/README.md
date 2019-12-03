@@ -1,6 +1,6 @@
 # Getting input domains
 
-We have an agreement with the operators of the respective DNS zones not to share their zonefiles with others. We must hence ask you to download the input data sets from DigitalOcean, which are preparsed versions of the zonefiles. See analysis/active-scans/README.md.
+We have an agreement with the operators of the respective DNS zones not to share their zonefiles with others. We must hence ask you to download the input data sets from DigitalOcean, which are preparsed versions of the zonefiles. See `active-scans-rfc/data/README.md`.
 
 # Running an RFC-based scan
 
