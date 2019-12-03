@@ -6,13 +6,15 @@ We have an agreement with the operators of the respective DNS zones not to share
 
 Our assumed working directory is `/home/tls13/tls13/`. Underneath that directory, we organise our files as follows:
 
-bin/
-inputs/
-outputs/$EPOCH
+```.
++-- bin/
++-- inputs/
++-- outputs/$EPOCH
+```
 
-where $EPOCH is a timestamp we assign to each scan, namely the time when we created the input list.
+where `$EPOCH` is a timestamp we assign to each scan, namely the time when we created the input list.
 
-We provide a number of scripts to run a complete scan. The steps are:
+We provide a number of scripts to run a complete scan. The steps are below.
 
 ## Run massdns
 
