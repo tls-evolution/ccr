@@ -11,7 +11,7 @@ Input
 - [ccTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-05/1556944522_cctld.domain.sortu+2ld.csv.gz) (326MB)
 
 Output of scanner scripts (massdns, zmap, goscanner) and post-processing scripts to extract ASN:
-- [Alexa](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-05/1556701596_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (20MB)
+- [Alexa hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-05/1556701596_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (20MB)
 - [CNO hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-05/1556701596_cno.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (1.8GB)
 - [CNO ASN mapping](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-05/1556701596_cno.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.asn.csv.gz) (1.6GB)
 - [CNO ASN mapping for failures](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-05/1556701596_cno.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.otherfailure.asn.csv.gz)
@@ -20,7 +20,7 @@ Output of scanner scripts (massdns, zmap, goscanner) and post-processing scripts
 - [ccTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-05/1556944522_cctld.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (779MB)
 
 Full pcap:
-- [Alexa](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-05/1556701596_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.tcpdump.pcap) (5.8GB)
+- [Alexa hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-05/1556701596_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.tcpdump.pcap) (5.8GB)
 - [CNO, ngTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-05/1556701596_domains.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.tcpdump.pcap) (504GB)
 - [ccTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-05/1556944522_cctld.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.tcpdump.pcap) (190GB)
 
@@ -28,15 +28,31 @@ Full pcap:
 
 Input
 - [Alexa](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-06/1559534698_alexa.domain.sortu+2ld.csv.gz) (5MB)
-- [CNO hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-06/1559534698_cno.domain.sortu.csv.gz) (607MB)
-- [ccTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-06/1559273373_cctld.domain.sortu+2ld.csv.gz) (326MB)
-- [ngTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-06/1559534698_czdsnonet.domain.sortu.csv.gz) (97MB)
+- [CNO](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-06/1559534698_cno.domain.sortu.csv.gz) (607MB)
+- [ccTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-06/1559273373_cctld.domain.sortu+2ld.csv.gz) (326MB)
+- [ngTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-06/1559534698_czdsnonet.domain.sortu.csv.gz) (97MB)
 
 Output
-- [Alexa](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-06/1559534698_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (20MB)
+- [Alexa hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-06/1559534698_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (20MB)
 - [CNO hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-06/1559534698_cno.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (1.8GB)
 - [ccTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-06/1559273373_cctld.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (759MB)
 - [ngTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-06/1559534698_czdsnonet.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (159MB)
+
+### 2019-07
+
+Input
+- [Alexa](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-07/1562135339_alexa.domain.sortu+2ld.csv.gz) (5MB)
+- [CNO](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-07/1562135339_cno.domain.sortu.csv.gz) (607MB)
+- [ccTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-07/1562135339_cctld.domain.sortu+2ld.csv.gz) (326MB)
+- [ngTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-07/1562135339_czdsnonet.domain.sortu.csv.gz) (97MB)
+
+Output
+- [Alexa hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-07/1562135339_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
+- [Alexa domain categorized](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-07/1562135339_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.top.100000.vtmapped.csv.gz)
+- [CNO hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-07/1562135339_cno.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
+- [ccTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-07/1562135339_cctld.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
+- [ngTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-07/1562135339_czdsnonet.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
+
 
 ## Data in this directory
 
