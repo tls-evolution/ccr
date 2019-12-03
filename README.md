@@ -5,11 +5,13 @@ We apologise for the need to distribute data sets and tools across several locat
 
 ## Data sets and measurement tools
 
-### Active scans
+### Active scans (RFC)
 
-Our RFC-based scanner is published in this repository: https://github.com/ralphholz-usyd/goscanner/. We provide the scripts to run the scans in active-scans/.
+Our RFC-based scanner is published in this [repository](https://github.com/ralphholz-usyd/goscanner/). We provide the scripts to run the scans in `active-scans/run-scans/`.
 
-Data sets are massive - we upload these into a DigitalOcean space. We are currently offering full data to the data of 2019-05; other uploads are still going on. These files are publicly visibile, but we would prefer if reviewers are OK with private links. The reason the uploads are so slow is that, e.g., a full PCAP is 0.5TB.
+Our data sets are massive - we upload these into a DigitalOcean space. We are currently offering full data (i.e. including the PCAP) for 2019-05. The other scans are only available as output files of our tools. They files are publicly visibile, but we would prefer if reviewers are OK with private links.
+
+Please understand that uploading a PCAP takes time and money - one PCAP can be 0.5TB. We are happy to offer all PCAPs via direct transfer if requested.
 
 ### Passive monitoring
 
@@ -22,6 +24,10 @@ https://github.com/0xxon/tls-1.3-passive-pipeline
 For our analysis of TLS 1.3 adoption in Android, we used data collected by Lumen. We have released the portion of Lumen data used for this study on the Haystack Project [website](https://haystack.mobi/datasets) and on [Zenodo](https://zenodo.org).
 
 ## Analysis scripts
+
+### Active scans (RFC)
+
+
 
 ### Android data analysis
 
