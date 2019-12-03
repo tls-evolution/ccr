@@ -9,7 +9,7 @@ We apologise for the need to distribute data sets and tools across several locat
 
 Our RFC-based scanner is published in this repository: https://github.com/ralphholz-usyd/goscanner/. We provide the scripts to run the scans in active-scans/.
 
-Data sets are massive - we upload these into a DigitalOcean space. We are currently making these files publicly visibile, but we would prefer if reviewers are OK with private links.
+Data sets are massive - we upload these into a DigitalOcean space. We are currently making these files available without any credentials, but ask reviewers not to share the paths with others.
 
 ### Passive monitoring
 
