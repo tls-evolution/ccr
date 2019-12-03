@@ -20,3 +20,8 @@ Output of goscanner (RFC) and processing scripts:
 Full pcap:
 - [Alexa](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/1556701596/1556701596_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.tcpdump.pcap) (5.8GB)
 - [CNO, ngTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/1556701596/1556701596_domains.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.tcpdump.pcap) (504GB)
+
+
+## Data in this directory
+
+- Lookup data of Alexa 100k from VirusTotal
