@@ -7,7 +7,7 @@ We apologise for the need to distribute data sets and tools across several locat
 
 ### Preparation
 
-We provide IP ranges as determined by us for the chosen providers in `preparation`. In `mappings`, you find key-value pairs of scan timestamps to respective months. Some of our analysis scripts use these to automatically figure out which file to load next. The scripts have environment variables that you can point at the directory holding the mappings.
+We provide IP ranges as determined by us for the chosen providers in `preparation/ipranges`. In `preparation/mappings`, you find key-value pairs of scan timestamps to respective months. Some of our analysis scripts use these to automatically figure out which file to load next. The scripts have environment variables that you can point at the directory holding the mappings.
 
 ### Active scans (RFC)
 
