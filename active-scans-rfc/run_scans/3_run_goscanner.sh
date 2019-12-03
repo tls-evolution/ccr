@@ -25,6 +25,7 @@ ulimit -Sn 65535
 # TCP: too many orphaned sockets
 echo 16384 > /proc/sys/net/ipv4/tcp_max_orphans
 
+# Adjust as needed
 GOSCANNER=/home/tls13/tls13/workspaces/goscanner/src/github.com/tumi8/goscanner/goscanner
 GOSCANNER_CONF_FILE=/home/tls13/tls13/experiment/conf/goscanner.conf
 TCPDUMP=/usr/sbin/tcpdump
