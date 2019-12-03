@@ -8,6 +8,7 @@ Our assumed working directory is `/home/tls13/tls13/`. Underneath that directory
 
 ```
 .
++-- go/ -- we put a local installation of Go here
 +-- bin/ -- this is where our scripts go
 +-- inputs/ -- this is where input files go
 +-- outputs/$EPOCH -- you guessed it, the output files will be written to this location
