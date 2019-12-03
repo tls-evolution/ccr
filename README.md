@@ -9,7 +9,7 @@ We apologise for the need to distribute data sets and tools across several locat
 
 Our RFC-based scanner is published in this repository: https://github.com/ralphholz-usyd/goscanner/. We provide the scripts to run the scans in active-scans/.
 
-Data sets are massive - we upload these into a DigitalOcean space. We are currently making these files publicly visibile, but we would prefer if reviewers are OK with private links.
+Data sets are massive - we upload these into a DigitalOcean space. We are currently offering full data to the data of 2019-05; other uploads are still going on. These files are publicly visibile, but we would prefer if reviewers are OK with private links. The reason the uploads are so slow is that, e.g., a full PCAP is 0.5TB.
 
 ### Passive monitoring
 
