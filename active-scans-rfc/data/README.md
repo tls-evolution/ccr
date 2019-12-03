@@ -69,6 +69,20 @@ Output
 - [ccTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-08/1564627018_cctld.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
 - [ngTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-08/1564651686_czdsnonet.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (164MB)
 
+### 2019-10
+
+Input
+- [Alexa](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-10/1570317700_alexa.domain.sortu+2ld.csv.gz)
+- [CNO](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-10/1570317700_cno.domain.sortu.csv.gz)
+- [ccTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-10/1570317700_cctld.domain.sortu+2ld.csv.gz)
+- [ngTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-10/1570317700_czdsnonet.domain.sortu.csv.gz)
+
+Output
+- [Alexa hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-10/1570317700_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
+- [CNO hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-10/1570317700_cno.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
+- [ccTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-10/1570317700_cctld.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
+- [ngTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-10/1570317700_czdsnonet.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
+
 
 ## Data in this directory
 
