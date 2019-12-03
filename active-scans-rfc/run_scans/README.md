@@ -6,10 +6,11 @@ We have an agreement with the operators of the respective DNS zones not to share
 
 Our assumed working directory is `/home/tls13/tls13/`. Underneath that directory, we organise our files as follows:
 
-```.
-+-- bin/
-+-- inputs/
-+-- outputs/$EPOCH
+```
+.
++-- bin/ -- this is where our scripts go
++-- inputs/ -- this is where input files go
++-- outputs/$EPOCH -- you guessed it, the output files will be written to this location
 ```
 
 where `$EPOCH` is a timestamp we assign to each scan, namely the time when we created the input list.
