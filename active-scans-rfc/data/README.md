@@ -1,5 +1,7 @@
 # Data set
 
+Please note that you will need to unzip the files before you can run any analysis scripts.
+
 ## Links to data
 
 ### 2019-05
@@ -52,6 +54,20 @@ Output
 - [CNO hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-07/1562135339_cno.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (1.8GB)
 - [ccTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-07/1562135339_cctld.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
 - [ngTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-07/1562135339_czdsnonet.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (164MB)
+
+### 2019-08
+
+Input
+- [Alexa](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-08/1564627018_alexa.domain.sortu+2ld.csv.gz) (5MB)
+- [CNO](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-08/1564651686_cno.domain.sortu.csv.gz) (609MB)
+- [ccTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-08/1564627018_cctld.domain.sortu+2ld.csv.gz) (326MB)
+- [ngTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-08/1564651686_czdsnonet.domain.sortu.csv.gz) (98MB)
+
+Output
+- [Alexa hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-08/1564627018_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (20MB)
+- [CNO hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-08/1564651686_cno.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (1.8GB)
+- [ccTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-08/1564627018_cctld.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
+- [ngTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-08/1564651686_czdsnonet.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (164MB)
 
 
 ## Data in this directory
