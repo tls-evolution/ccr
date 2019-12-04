@@ -9,6 +9,10 @@ We apologise for the need to distribute data sets and tools across several locat
 
 We provide IP ranges as determined by us for the chosen providers in `preparation/ipranges`. In `preparation/mappings`, you find key-value pairs of scan timestamps to respective months. Some of our analysis scripts use these to automatically figure out which file to load next. The scripts have environment variables that you can point at the directory holding the mappings.
 
+### Active scans (TLS 1.3 drafts)
+
+Our usage of our modified zgrab scanner for the scanning of TLS 1.3 draft support is detailed in `active-scans-drafts`. This directory provides helper scripts to build the scanner as well as usage examples. The scripts already set up the source code which is available here: [zgrab](https://github.com/tls-evolution/zgrab), [zcrypto](https://github.com/tls-evolution/zcrypto)
+
 ### Active scans (RFC)
 
 [Quick link to data for the impatient](https://github.com/tls-evolution/ccr/tree/master/active-scans-rfc/data)
