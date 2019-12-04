@@ -11,11 +11,12 @@ We provide IP ranges as determined by us for the chosen providers in `preparatio
 
 ### Active scans (RFC)
 
-Our RFC-based scanner is published in this [repository](https://github.com/ralphholz-usyd/goscanner/). We provide the scripts to run the scans in `active-scans/run-scans/`.
+[Quick link to data for the impatient](https://github.com/tls-evolution/ccr/tree/master/active-scans-rfc/data)
 
-Our data sets are massive - we upload these into a DigitalOcean space. We are currently offering full data (i.e. including the PCAP) for 2019-05. The other scans are only available as output files of our tools. They files are publicly visibile, but we would prefer if reviewers are OK with private links.
+Our RFC-based scanner is published in this [repository](https://github.com/ralphholz-usyd/goscanner/). We provide the scripts to run the scans in the directory `active-scans/run-scans/`.
 
-Please understand that uploading a PCAP takes time and money - one PCAP can be 0.5TB. We are happy to offer all PCAPs via direct transfer if requested.
+Our data sets are massive - we upload these into a DigitalOcean space. We are currently offering the output data for all our scans, but the PCAPs for just 2019-05 because they need 0.5TB storage.
+We are happy to offer all PCAPs via direct transfer if requested.
 
 ### Passive monitoring
 
