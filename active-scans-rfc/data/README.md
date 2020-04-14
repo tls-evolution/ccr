@@ -29,73 +29,73 @@ Full pcap:
 ### 2019-06
 
 Input
-- [Alexa](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-06/1559534698_alexa.domain.sortu+2ld.csv.gz) (5MB)
-- [CNO](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-06/1559534698_cno.domain.sortu.csv.gz) (607MB)
-- [ccTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-06/1559273373_cctld.domain.sortu+2ld.csv.gz) (326MB)
-- [ngTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-06/1559534698_czdsnonet.domain.sortu.csv.gz) (97MB)
+- [Alexa](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-06/1559534698_alexa.domain.sortu+2ld.csv.gz) (5MB)
+- [CNO](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-06/1559534698_cno.domain.sortu.csv.gz) (607MB)
+- [ccTLD](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-06/1559273373_cctld.domain.sortu+2ld.csv.gz) (326MB)
+- [ngTLD](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-06/1559534698_czdsnonet.domain.sortu.csv.gz) (97MB)
 
 Output
-- [Alexa hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-06/1559534698_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (20MB)
-- [CNO hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-06/1559534698_cno.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (1.8GB)
-- [ccTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-06/1559273373_cctld.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (759MB)
-- [ngTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-06/1559534698_czdsnonet.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (159MB)
+- [Alexa hosts](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-06/1559534698_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (20MB)
+- [CNO hosts](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-06/1559534698_cno.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (1.8GB)
+- [ccTLD hosts](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-06/1559273373_cctld.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (759MB)
+- [ngTLD hosts](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-06/1559534698_czdsnonet.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (159MB)
 
 ### 2019-07
 
 Input
-- [Alexa](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-07/1562135339_alexa.domain.sortu+2ld.csv.gz) (5MB)
-- [CNO](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-07/1562135339_cno.domain.sortu.csv.gz) (609MB)
-- [ccTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-07/1562135339_cctld.domain.sortu+2ld.csv.gz) (326MB)
-- [ngTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-07/1562135339_czdsnonet.domain.sortu.csv.gz) (98MB)
+- [Alexa](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-07/1562135339_alexa.domain.sortu+2ld.csv.gz) (5MB)
+- [CNO](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-07/1562135339_cno.domain.sortu.csv.gz) (609MB)
+- [ccTLD](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-07/1562135339_cctld.domain.sortu+2ld.csv.gz) (326MB)
+- [ngTLD](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-07/1562135339_czdsnonet.domain.sortu.csv.gz) (98MB)
 
 Output
-- [Alexa hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-07/1562135339_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (20MB)
-- [Alexa domain categorized](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-07/1562135339_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.top.100000.vtmapped.csv.gz) (1MB)
-- [CNO hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-07/1562135339_cno.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (1.8GB)
-- [ccTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-07/1562135339_cctld.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
-- [ngTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-07/1562135339_czdsnonet.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (164MB)
+- [Alexa hosts](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-07/1562135339_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (20MB)
+- [Alexa domain categorized](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-07/1562135339_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.top.100000.vtmapped.csv.gz) (1MB)
+- [CNO hosts](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-07/1562135339_cno.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (1.8GB)
+- [ccTLD hosts](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-07/1562135339_cctld.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
+- [ngTLD hosts](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-07/1562135339_czdsnonet.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (164MB)
 
 ### 2019-08
 
 Input
-- [Alexa](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-08/1564627018_alexa.domain.sortu+2ld.csv.gz) (5MB)
-- [CNO](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-08/1564651686_cno.domain.sortu.csv.gz) (609MB)
-- [ccTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-08/1564627018_cctld.domain.sortu+2ld.csv.gz) (326MB)
-- [ngTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-08/1564651686_czdsnonet.domain.sortu.csv.gz) (98MB)
+- [Alexa](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-08/1564627018_alexa.domain.sortu+2ld.csv.gz) (5MB)
+- [CNO](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-08/1564651686_cno.domain.sortu.csv.gz) (609MB)
+- [ccTLD](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-08/1564627018_cctld.domain.sortu+2ld.csv.gz) (326MB)
+- [ngTLD](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-08/1564651686_czdsnonet.domain.sortu.csv.gz) (98MB)
 
 Output
-- [Alexa hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-08/1564627018_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (20MB)
-- [CNO hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-08/1564651686_cno.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (1.8GB)
-- [ccTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-08/1564627018_cctld.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
-- [ngTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-08/1564651686_czdsnonet.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (164MB)
+- [Alexa hosts](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-08/1564627018_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (20MB)
+- [CNO hosts](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-08/1564651686_cno.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (1.8GB)
+- [ccTLD hosts](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-08/1564627018_cctld.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
+- [ngTLD hosts](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-08/1564651686_czdsnonet.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (164MB)
 
 ### 2019-10
 
 Input
-- [Alexa](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-10/1570317700_alexa.domain.sortu+2ld.csv.gz)
-- [CNO](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-10/1570317700_cno.domain.sortu.csv.gz)
-- [ccTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-10/1570317700_cctld.domain.sortu+2ld.csv.gz)
-- [ngTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-10/1570317700_czdsnonet.domain.sortu.csv.gz)
+- [Alexa](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-10/1570317700_alexa.domain.sortu+2ld.csv.gz)
+- [CNO](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-10/1570317700_cno.domain.sortu.csv.gz)
+- [ccTLD](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-10/1570317700_cctld.domain.sortu+2ld.csv.gz)
+- [ngTLD](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-10/1570317700_czdsnonet.domain.sortu.csv.gz)
 
 Output
-- [Alexa hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-10/1570317700_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
-- [CNO hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-10/1570317700_cno.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
-- [ccTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-10/1570317700_cctld.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
-- [ngTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-10/1570317700_czdsnonet.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
+- [Alexa hosts](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-10/1570317700_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
+- [CNO hosts](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-10/1570317700_cno.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
+- [ccTLD hosts](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-10/1570317700_cctld.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
+- [ngTLD hosts](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-10/1570317700_czdsnonet.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
 
 ### 2019-11
 
 Input
-- [Alexa](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-11/1572573861_alexa.domain.sortu+2ld.csv.gz)
-- [CNO](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-11/1572573861_cno.domain.sortu.csv.gz)
-- [ccTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-11/1572573861_cctld.domain.sortu+2ld.csv.gz)
-- [ngTLD](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-11/1572573861_czdsnonet.domain.sortu.csv.gz)
+- [Alexa](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-11/1572573861_alexa.domain.sortu+2ld.csv.gz)
+- [CNO](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-11/1572573861_cno.domain.sortu.csv.gz)
+- [ccTLD](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-11/1572573861_cctld.domain.sortu+2ld.csv.gz)
+- [ngTLD](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-11/1572573861_czdsnonet.domain.sortu.csv.gz)
 
 Output
-- [Alexa hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-11/1572573861_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
-- [CNO hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-11/1572573861_cno.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
-- [ccTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-11/1572573861_cctld.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
-- [ngTLD hosts](https://tls13-evolution.sfo2.digitaloceanspaces.com/active-scans/outputs/2019-11/1572573861_czdsnonet.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
+- [Alexa hosts](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-11/1572573861_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
+- [CNO hosts](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-11/1572573861_cno.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
+- [ccTLD hosts](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-11/1572573861_cctld.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
+- [ngTLD hosts](https://tls13.globalsecuritylabs.org:41313/active-scans/outputs/2019-11/1572573861_czdsnonet.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
 
 
 ## Data in this directory
