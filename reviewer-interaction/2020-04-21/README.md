@@ -63,6 +63,6 @@ Looking inside:
 
 The format of these domain names is interesting: always six random alphabetic characters under the TLD suffices .icu and .live, mostly.
 
-One check we did not do for the paper: check the NS of the domain. Sadly, we only looked up the NS for domains with successful TLS 1.3 handshakes. We should be able to pull this data from OpenINTEL, if needed. As of 2020-04-21, resolving the NS record for `oqoye.icu` and `tcytkf.live` yields ns1.ecpage.com. and ns2.ecpage.com.
+One check we did not do for the paper: check the NS of the domain. Sadly, we only looked up the NS for domains with successful TLS 1.3 handshakes. We pulled this data from OpenINTEL, but note that their vantage point is in the Netherlands. However, the NS is the same as when resolving the NS record for `oqoye.icu` and `tcytkf.live` from Australia, on 2020-04-21: ns1.ecpage.com. and ns2.ecpage.com.
 
 When we took a sample of domains in `.icu` and `.live` and tested plain HTTP on the HTTPS port, this showed an HTTP error by Cloudflare (as it should). Testing this again on 2020-04-21, but with HTTPS, we get the SSLv3 handshake error.
