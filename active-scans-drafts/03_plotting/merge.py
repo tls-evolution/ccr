@@ -39,7 +39,7 @@ parser.add_argument('--out', required=True)
 parser.add_argument('--prefix', default='')
 args = parser.parse_args()
 
-if (not args.input) or (len(args.input) < 2) :
+if (not args.input) :
   print("Need to specify at least two --in <directories>")
   exit(-1)
 
