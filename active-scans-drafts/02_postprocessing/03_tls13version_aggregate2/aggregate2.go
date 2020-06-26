@@ -61,6 +61,7 @@ type AggregatedSample struct {
 	MostRecentSuccess *TimeVersionIP `json:"tls-full,omitempty"`
 	MostRecentPartial *TimeVersionIP `json:"tls-SH,omitempty"`
 	Bitmaps           Bitmaps        `json:"tls-ver-bitmaps"`
+	SeenRefuse        bool           `json:"443_refused"`
 }
 
 type MappedAggregatedSample struct {
@@ -135,6 +136,7 @@ type SecondAggregate struct {
 	FullTotal             int `json:"full"`
 	FullOrShTotal         int `json:"full_or_SH"`
 	FullAndSHTotal        int `json:"full_and_SH"`
+	Refused               int `json:"443_refused"`
 	Total                 int `json:"all"`
 }
 
@@ -184,6 +186,9 @@ func (v *SecondAggregate) aggregate(sample *AggregatedSample) {
 		v.FullOrShTotal++
 		v.FullPreferredSHLatest.incrementVer(sample.MostRecentPartial.VersionInfo.Version)
 		v.FullOrSHLatest.incrementVer(sample.MostRecentPartial.VersionInfo.Version)
+	} else if sample.SeenRefuse {
+		// 443 refused counter, only count if no full or partial HS has been seen
+		v.Refused++
 	}
 
 	// Multimap counters
@@ -208,6 +213,7 @@ func (v *SecondAggregate) aggregate(sample *AggregatedSample) {
 			v.MultiVersionCountsEither.Counts[i]++
 		}
 	}
+
 }
 
 type Result struct {

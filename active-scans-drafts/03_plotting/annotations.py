@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from config import *
 
 # annotate the different draft versions as rectangles
-def add(fig, ax, pvers, svers=ScannerVersions):
+def add(fig, ax, pvers, svers=ScannerVersions, draw_verticals_only=False, timebar_name_yoffset=0.02):
   trans = None 
   offset = None
   toff = None
@@ -26,7 +26,7 @@ def add(fig, ax, pvers, svers=ScannerVersions):
     axis_to_data = ax.transAxes + ax.transData.inverted()
     data_to_axis = axis_to_data.inverted()
 
-    return shift + (DEFAULT_FONTSIZE+2+2)/72
+    return shift + (2*(DEFAULT_FONTSIZE+2+2))/72
 
   def deployment_date_to_plot_date(pd_timestamp):
     # day = 1  # The scanner had influence on the "full month"
@@ -43,7 +43,7 @@ def add(fig, ax, pvers, svers=ScannerVersions):
     # return pd_timestamp
 
 
-  def addTimeBar(AllVersions, SelectedVersions, Infos, drawV, is_scanner=False):
+  def addTimeBar(AllVersions, SelectedVersions, Infos, drawV, timebar_name, timebar_name_yoffset, is_scanner=False, draw_verticals_only=False):
     start_axis = {}
     for ver in range(len(AllVersions)):
       dinfo = Infos[AllVersions[ver]]
@@ -60,6 +60,7 @@ def add(fig, ax, pvers, svers=ScannerVersions):
         #ax.axvline(x=dinfo["start"], ls=":", c="#c0c0c0", zorder=0)
         pass
 
+    first = False
     for ver in range(len(AllVersions)):
       if not (AllVersions[ver] in SelectedVersions):
         continue
@@ -89,10 +90,16 @@ def add(fig, ax, pvers, svers=ScannerVersions):
 
       ## Add vertical line through top
       if (x1t < 1) and drawV:
-        ax.annotate('', xy=(x1t, 1.0), xytext=(x1t, 1.0), xycoords=axoff, textcoords=ax.transAxes,
-                    arrowprops={'arrowstyle': '-', 'lw':  DEFAULT_LINEWIDTH, 'shrinkA': 0, 'shrinkB': 0})
-        ax.annotate('', xy=(x1t, 0.0), xytext=(x1t, 1.0), xycoords=ax.transAxes, textcoords=ax.transAxes,
-                    arrowprops={'arrowstyle': '-', 'lw':  DEFAULT_LINEWIDTH, 'shrinkA': 0, 'shrinkB': 0, 'ls': (0, (5, 5))}).set_zorder(0)
+        if not draw_verticals_only:
+          ax.annotate('', xy=(x1t, 1.0), xytext=(x1t, 1.0), xycoords=axoff, textcoords=ax.transAxes,
+                      arrowprops={'arrowstyle': '-', 'lw':  DEFAULT_LINEWIDTH, 'shrinkA': 0, 'shrinkB': 0})
+        ann = ax.annotate('', xy=(x1t, 0.0), xytext=(x1t, 1.0), xycoords=ax.transAxes, textcoords=ax.transAxes,
+                    arrowprops={'arrowstyle': '-', 'lw':  DEFAULT_LINEWIDTH, 'shrinkA': 0, 'shrinkB': 0, 'ls': (0, (5, 5))})
+        if PLOT_ANNOTATIONS_BEHIND_VERSION_STACKS:
+          ann.set_zorder(0)
+
+      if draw_verticals_only:
+        continue
 
       larrow = '<|'
       rarrow = '|>'
@@ -106,8 +113,11 @@ def add(fig, ax, pvers, svers=ScannerVersions):
       ax.annotate('', xy=(x0t, 1.0), xytext=(x1t, 1.0), xycoords=axoff,
                 arrowprops={'arrowstyle': larrow + '-' + rarrow, 'color': col, 'lw': DEFAULT_LINEWIDTH
                 })
+      if not first:
+        ax.annotate(" " + timebar_name, xy=(x0t, 1.0 + timebar_name_yoffset), xycoords=axoff, ha='left', va='bottom')
+        first = True
 
-      ax.annotate(name, xy=((x0t + x1t)*0.5, 1.0), xycoords=texoff, ha='center', va='bottom', color=col)
+      t = ax.annotate("\\textbf{" + name + "}", xy=((x0t + x1t)*0.5, 1.0), xycoords=texoff, ha='center', va='bottom', color=col)
 
       ## Colorize backgrounds
       #rect = mpatches.Rectangle((x0,0), width=x1-x0, height=1,
@@ -116,7 +126,8 @@ def add(fig, ax, pvers, svers=ScannerVersions):
       #ax.add_patch(rect)
 
   yoff = initOffset(0.0/72.0)
-  addTimeBar(DraftVersions, pvers, DraftInfo, True)
-  initOffset(yoff)
-  addTimeBar(ScannerMajors + ["FUTURE"], ScannerMajors, ScannerInfo, False, is_scanner=True)
+  addTimeBar(AllVersions=DraftVersions, SelectedVersions=pvers, Infos=DraftInfo, drawV=True, timebar_name="TLS 1.3 draft history", timebar_name_yoffset=timebar_name_yoffset, draw_verticals_only=draw_verticals_only)
+  if not draw_verticals_only:
+    initOffset(yoff)
+    addTimeBar(AllVersions=ScannerMajors + ["FUTURE"], SelectedVersions=ScannerMajors, Infos=ScannerInfo, drawV=False, timebar_name="Highest supported draft (scanner)", timebar_name_yoffset=timebar_name_yoffset, is_scanner=True)
 
