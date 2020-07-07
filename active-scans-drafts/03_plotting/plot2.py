@@ -183,14 +183,18 @@ def genPlot_single(path, domain_list, args):
   for axis, axis_id in axes:
     axis.set_xticks(xticks_positions)
     axis.set_xticklabels(xticks_labels,
-      horizontalalignment='right',  # 'center',
-      verticalalignment='top', # baseline
+      # see https://matplotlib.org/3.1.1/gallery/text_labels_and_annotations/demo_text_rotation_mode.html
+      horizontalalignment='right',  # 'center', 'right', 'left'
+      verticalalignment='center', # 'baseline', 'top', 'bottom'
+      rotation_mode='anchor', # 'default', 'anchor'
       rotation=60,
-      usetex=False
+      usetex=True,
+      fontfamily='serif',
+      fontname='Times',
       )
-    xticks_label_offset = 0.03
+    xticks_label_offset = 0.00
     if args.basedirtwo:
-      xticks_label_offset = 0.061
+      xticks_label_offset = 0.00
     for xtl in axis.get_xticklabels():
       xtl.set_y(xtl.get_position()[1] - xticks_label_offset)
     axis.set_xticks([], minor=True)
@@ -202,9 +206,9 @@ def genPlot_single(path, domain_list, args):
     ylabel = "Percent of domains"
     if args.basedirtwo:
       if axis_id == 0:
-        axis.set_ylabel(ylabel, fontsize=15, horizontalalignment='right')
+        axis.set_ylabel(ylabel, fontsize=15, horizontalalignment='right', usetex=True, fontfamily='serif', fontname='Times')
     else:
-      axis.set_ylabel(ylabel, fontsize=15)
+      axis.set_ylabel(ylabel, fontsize=15, usetex=True, fontfamily='serif', fontname='Times')
     if args.nonfixedylimit:
       y_max = axis.get_ylim()[1] * 1.25
       if y_max > 100:
@@ -226,6 +230,18 @@ def genPlot_single(path, domain_list, args):
 
     axis.set_xlim([pd.Timestamp(2017, 10, 1, 0, 0), pd.Timestamp(2019, 4, 1, 0, 0)])
 
+    # for tick in axis.get_xticklabels():
+    #   tick.set_fontfamily('serif')
+    #   tick.set_fontname('Times')
+    #   tick.set_usetex(True)
+    for tick in axis.get_yticklabels():
+      # print(tick.get_family())
+      # print(tick.get_fontname())
+      # print(tick.get_font_properties())
+      tick.set_fontfamily('serif')
+      tick.set_fontname('Times')
+      tick.set_usetex(True)
+
   params = {'backend': 'ps',
             # 'axes.labelsize': 20, # fontsize for x and y labels (was 10)
             # 'axes.titlesize': 20,
@@ -241,6 +257,7 @@ def genPlot_single(path, domain_list, args):
             'hatch.linewidth': hatch_linewidth,
             # 'figure.figsize': [fig_width, fig_height],
             'font.family': 'serif',
+            # 'font.sans-serif': 'Comic Sans MS',
             'font.serif': 'Times'
   }
   mpl.rcParams.update(params)
