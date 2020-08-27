@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # TODO: Update the Useragent: You MUST change the URL! It MUST provide information that enables scan-targets to contact YOU to request blacklisting.
-USERAGENT="Mozilla/5.0 zgrab/0.x (compatible; Researchscan/t13rl; +http://researchscan.comsys.rwth-aachen.de; Community Version for Reproducibility: RWTH Aachen is NOT responsible for this Scan!)"
+USERAGENT="Mozilla/5.0 zgrab/0.x (compatible; Researchscan/t13rl; +http://scan-info-url.de; Community Version for Reproducibility"
 ZGRAB=./../zgrab-binaries/zgrab_rabbitQueue_tls-13-all-recent_since-2019-06-14
 
 # Blacklisting done by infrastructure already, additional recognition implemented in scanner
