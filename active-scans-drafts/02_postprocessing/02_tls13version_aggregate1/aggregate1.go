@@ -70,8 +70,8 @@ type InputSample struct {
 }
 
 type TimeVersionIP struct {
-	IP        string    `json:"ip"`
-	Timestamp time.Time `json:"timestamp"`
+	IP          string       `json:"ip"`
+	Timestamp   time.Time    `json:"timestamp"`
 	VersionInfo *VersionInfo `json:"tls,omitempty"`
 }
 
@@ -84,6 +84,7 @@ type AggregatedSample struct {
 	MostRecentSuccess *TimeVersionIP `json:"tls-full,omitempty"`
 	MostRecentPartial *TimeVersionIP `json:"tls-SH,omitempty"`
 	Bitmaps           Bitmaps        `json:"tls-ver-bitmaps"`
+	SeenRefuse        bool           `json:"443_refused"`
 }
 
 type MappedAggregatedSample struct {
@@ -116,6 +117,8 @@ func (self *AggregatedSample) merge(other *AggregatedSample) {
 
 	self.Bitmaps.Success = success
 	self.Bitmaps.Failed = failed
+
+	self.SeenRefuse = self.SeenRefuse || other.SeenRefuse
 
 	if other.MostRecentPartial != nil {
 		if self.MostRecentPartial == nil {
@@ -154,8 +157,20 @@ func (s InputSample) to_aggregated() *AggregatedSample {
 		tvi.VersionInfo = s.Version
 	}
 
+	res.SeenRefuse = false
 	if s.Error || len(s.ErrorMsg) > 0 {
 		res.MostRecentPartial = &tvi
+		if s.Version == nil {
+			res.SeenRefuse = strings.Contains(s.ErrorMsg, "connection refused") ||
+				strings.Contains(s.ErrorMsg, "blacklisted") ||
+				(strings.Contains(s.ErrorMsg, "dial tcp") &&
+					(strings.Contains(s.ErrorMsg, "i/o timeout") ||
+					strings.Contains(s.ErrorMsg, "connect: connection reset by peer") ||
+					strings.Contains(s.ErrorMsg, "connect: network is unreachable") ||
+					strings.Contains(s.ErrorMsg, "connect: no route to host") ||
+					strings.Contains(s.ErrorMsg, "no such host") ||
+					strings.Contains(s.ErrorMsg, "connect: invalid argument")))
+		}
 	} else {
 		res.MostRecentSuccess = &tvi
 	}

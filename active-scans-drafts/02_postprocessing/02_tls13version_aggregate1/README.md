@@ -15,7 +15,7 @@ python3 tls13version_aggregate1_run.py --basedir ${ZONE_DIRECTORY}
 
 In reality, we split up the processing into a phase where first processing the large lists and then following up with every list that is left. Furthermore, we parallelized the workload using multiple screen sessions.
 
-### Large lists (alexa, com, net, org, de, se, nu, majestic)
+### Large lists (alexa, com, net, org, de, se, nu, majestic, toplistsAlexaUmbrellaMajestic)
 
 Setting up screen sessions (example for com-A-www)
 ```bash

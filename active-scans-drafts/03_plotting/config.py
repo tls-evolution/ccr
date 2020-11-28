@@ -10,6 +10,7 @@ dtp_per_inch = 72.27
 DEFAULT_MARKERSIZE = 1
 DEFAULT_LINEWIDTH = 1
 DOT_MISSING = True
+PLOT_ANNOTATIONS_BEHIND_VERSION_STACKS = True
 
 
 class StackedType(Enum):
@@ -34,20 +35,50 @@ DraftVersions = ['TLSv1.2',
 
 Color10 = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf', '#1a55FF']
 
+ColorViridis = [
+  # cf. Slack / viridis color palette pdf
+  '#F6E726',
+  '#B8DE2A',
+  '#56C667',
+  '#47A386',
+  '#35718E',
+  '#3F4788',
+  '#482676',
+  '#481568',
+# # special viridis order for this paper
+#     ( 31/256., 163/256., 134/256.),
+#     ( 57/256.,  85/256., 140/256.),
+#     ( 72/256.,  39/256., 119/256.),
+#     (220/256., 227/256.,  22/256.),
+#     # viridis
+#     # https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html
+#     # (253/256., 231/256.,  36/256.),
+#     # (220/256., 227/256.,  22/256.),
+#     (184/256., 222/256.,  40/256.), # kind of neon
+#     (116/256., 208/256.,  85/256.),
+#     ( 59/256., 188/256., 117/256.),
+#     # ( 31/256., 163/256., 134/256.),
+#     # ( 34/256., 138/256., 141/256.),
+#     ( 44/256., 113/256., 142/256.),
+#     # ( 57/256.,  85/256., 140/256.),
+#     # ( 69/256.,  55/256., 129/256.),
+#     # ( 72/256.,  39/256., 119/256.), # ( 72/256.,  22/256., 104/256.), # latter is not optimal regarding black errorbars
+]
+
 DraftInfo = {
         'TLSv1.2'       : { 'start': pd.Timestamp(2008, 8, 1, 0, 0),   'short': 'RFC', 'marker': '.', 'color': '#000000',  'hatch': 'x'*5},
-	'TLSv1.3draft18': { 'start': pd.Timestamp(2016, 10, 26, 0, 0), 'short': '18',  'marker': '.', 'color': Color10[1], 'hatch': 'x'*5},
-	'TLSv1.3draft19': { 'start': pd.Timestamp(2017, 3, 10, 0, 0),  'short': '19',  'marker': '.', 'color': Color10[4], 'hatch': 'x'*5},
-	'TLSv1.3draft20': { 'start': pd.Timestamp(2017, 4, 28, 0, 0),  'short': '20',  'marker': '.', 'color': '#000000' , 'hatch': 'x'*5},
-	'TLSv1.3draft21': { 'start': pd.Timestamp(2017, 7, 3, 0, 0),   'short': '21',  'marker': '.', 'color': Color10[5], 'hatch': 'x'*5},
-	'TLSv1.3draft22': { 'start': pd.Timestamp(2017, 11, 29, 0, 0), 'short': '22',  'marker': '.', 'color': Color10[2], 'hatch': 'x'*5},
-        'TLSv1.3draft23': { 'start': pd.Timestamp(2018, 1, 5, 0, 0),   'short': '23',  'marker': '.', 'color': Color10[3], 'hatch': 'x'*5},
-        'TLSv1.3draft24': { 'start': pd.Timestamp(2018, 2, 15, 0, 0),  'short': '24',  'marker': '.', 'color': '#000000' , 'hatch': 'x'*5},
-        'TLSv1.3draft25': { 'start': pd.Timestamp(2018, 3, 2, 0, 0),   'short': '25',  'marker': '.', 'color': '#000000' , 'hatch': 'x'*5},
-        'TLSv1.3draft26': { 'start': pd.Timestamp(2018, 3, 4, 0, 0),   'short': '26',  'marker': '.', 'color': Color10[6], 'hatch': 'x'*5},
-        'TLSv1.3draft27': { 'start': pd.Timestamp(2018, 3, 18, 0, 0),  'short': '27',  'marker': '.', 'color': '#000000' , 'hatch': 'x'*5},
-        'TLSv1.3draft28': { 'start': pd.Timestamp(2018, 3, 20, 0, 0),  'short': '28',  'marker': '.', 'color': Color10[7], 'hatch': 'x'*5},
-	'TLSv1.3'       : { 'start': pd.Timestamp(2018, 8, 1, 0, 0),   'short': 'RFC', 'marker': '.', 'color': Color10[0], 'hatch': 'x'*5},
+        'TLSv1.3draft18': { 'start': pd.Timestamp(2016, 10, 26, 0, 0), 'short': '18',  'marker': '.', 'color': ColorViridis[0], 'hatch': 'x'*5},
+        'TLSv1.3draft19': { 'start': pd.Timestamp(2017, 3, 10, 0, 0),  'short': '19',  'marker': '.', 'color': ColorViridis[1], 'hatch': 'x'*5},
+        'TLSv1.3draft20': { 'start': pd.Timestamp(2017, 4, 28, 0, 0),  'short': '20',  'marker': '.', 'color': '#000000' , 'hatch': 'x'*5},
+        'TLSv1.3draft21': { 'start': pd.Timestamp(2017, 7, 3, 0, 0),   'short': '21',  'marker': '.', 'color': ColorViridis[2], 'hatch': 'x'*5},
+        'TLSv1.3draft22': { 'start': pd.Timestamp(2017, 11, 29, 0, 0), 'short': '22',  'marker': '.', 'color': ColorViridis[3], 'hatch': 'x'*5},
+        'TLSv1.3draft23': { 'start': pd.Timestamp(2018, 1, 5, 0, 0),   'short': '23',  'marker': '.', 'color': ColorViridis[4], 'hatch': 'x'*5},
+        'TLSv1.3draft24': { 'start': pd.Timestamp(2018, 2, 15, 0, 0),  'short': '24',  'marker': '.', 'color': '#000000', 'hatch': 'x'*5},
+        'TLSv1.3draft25': { 'start': pd.Timestamp(2018, 3, 2, 0, 0),   'short': '25',  'marker': '.', 'color': '#000000', 'hatch': 'x'*5},
+        'TLSv1.3draft26': { 'start': pd.Timestamp(2018, 3, 4, 0, 0),   'short': '26',  'marker': '.', 'color': ColorViridis[5], 'hatch': 'x'*5},
+        'TLSv1.3draft27': { 'start': pd.Timestamp(2018, 3, 18, 0, 0),  'short': '27',  'marker': '.', 'color': '#000000', 'hatch': 'x'*5},
+        'TLSv1.3draft28': { 'start': pd.Timestamp(2018, 3, 20, 0, 0),  'short': '28',  'marker': '.', 'color': ColorViridis[6], 'hatch': 'x'*5},
+        'TLSv1.3'       : { 'start': pd.Timestamp(2018, 8, 1, 0, 0),   'short': 'RFC', 'marker': '.', 'color': ColorViridis[7], 'hatch': 'x'*5},
         'FUTURE'        : { 'start': pd.Timestamp(2100, 1, 1, 0, 0),   'short': 'Dummy'},
 }
 
@@ -95,7 +126,7 @@ ScannerVersions = ['V0', 'V1', 'V2', 'V3', 'V4', 'V5', 'V6']
 ScannerVersionsF = ScannerVersions + ['FUTURE']
 ScannerInfo = {
   # discrepancy: already saw d23 on 2018,1,21 e.g. on soccer-A-www => v2 was deployed
-  'V0'       : { 'start': pd.Timestamp(2008, 8, 1, 0, 0),  'short': '18', 'color': DraftInfo['TLSv1.3draft18']['color']},
+  'V0'       : { 'start': pd.Timestamp(2017, 10, 1, 0, 0), 'short': '18', 'color': DraftInfo['TLSv1.3draft18']['color']},
   'V1'       : { 'start': pd.Timestamp(2018, 2, 19, 0, 0), 'short': '22', 'color': DraftInfo['TLSv1.3draft22']['color']}, #d22 till here
   'V2'       : { 'start': pd.Timestamp(2018, 3, 6, 0, 0),  'short': '23', 'color': DraftInfo['TLSv1.3draft23']['color']}, #d23 since here
   'V3'       : { 'start': pd.Timestamp(2019, 2, 26, 0, 0), 'short': 'RFC', 'color': DraftInfo['TLSv1.3']['color']}, # signal up to d28

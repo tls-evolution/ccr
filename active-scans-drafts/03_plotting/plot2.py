@@ -13,8 +13,9 @@ import numpy as np
 from config import *
 import annotations
 
-fig_width = 241 # in pt
-fig_height = 75 #100 # in pt
+fig_width = 463 # in pt
+fig_height = 380 # 347 # in pt
+dtp_per_inch = 72.27
 
 #plotting_sets = ['full_latest.',  'full_preferred_over_sh_latest.', 'full_or_sh_latest.', 'full_and_sh_latest.']
 plotting_sets = [
@@ -22,6 +23,13 @@ plotting_sets = [
   'full_preferred_over_sh_latest.',
   'full_latest.'
   ]
+
+dataset_name_to_label = {
+  '_OVH': 'OVH',
+  '_SINGLEHOP': 'SingleHop'
+}
+
+hatch_linewidth = 1
 
 def loadFile(f):
   """Loads a single json file as row for a DataFrame
@@ -57,6 +65,11 @@ def makeRelativeTo13(df):
       ndf[subset + x] = df[subset + x] / df[subset + 'TLS1v.3Total']
   ndf_percent = ndf.iloc[:,:].mul(100, axis=0)
   return ndf_percent
+
+def makeRelativeToAll_443notBlocked(df):
+  df_fraction = df.iloc[:,:].div(df['all'] - df['443_refused'], axis=0) # just divide all colums by 'Total' column
+  df_percent = df_fraction.iloc[:,:].mul(100, axis=0)
+  return df_percent
 
 def makeRelativeToAll(df):
   # makes everything relative to the total count
@@ -95,8 +108,28 @@ def configStacks(stacks, pvers, stacktypes=None):
     stack.set_zorder(2 - (i+1)/len(stacks))
 
 def genPlot_single(path, domain_list, args):
-  df = gatherDataForZone(Path(path))
-  ndf = pd.DataFrame(index=df.index)
+  df1 = gatherDataForZone(Path(path))
+  ndf1 = pd.DataFrame(index=df1.index)
+  dataset1_name = path.rstrip('/').split('/')[-1]
+  datasets = [(df1, ndf1, 0, dataset1_name)]
+
+  df2 = None
+  ndf2 = None
+  if args.basedirtwo:
+    df2 = gatherDataForZone(Path(args.basedirtwo))
+    ndf2 = pd.DataFrame(index=df2.index)
+    dataset2_name = args.basedirtwo.rstrip('/').split('/')[-1]
+    datasets.append((df2, ndf2, 1, dataset2_name))
+
+  fig, ax, ax2, axes = (None, None, None, None)
+  if args.basedirtwo:
+    fig, axes = plt.subplots(2, 1, sharex='all', gridspec_kw={'hspace': 0.05})
+    ax = axes[0]
+    ax2 = axes[1]
+    axes = [(ax, 0), (ax2, 1)]
+  else:
+    fig, ax = plt.subplots(1, 1)
+    axes = [(ax, 0)]
 
   vers = [
     # 'SSLv3',
@@ -117,56 +150,97 @@ def genPlot_single(path, domain_list, args):
     'TLSv1.3'
     ]
   style = []
-  for v in vers:
-    ndf["full/" + v] = df['full_latest.' + v] / df['all'] * 100
-    ndf["SH/" + v] = (df['full_preferred_over_sh_latest.' + v] - df['full_latest.' + v]) / df['all'] * 100
+  for df, ndf, index, dataset_name in datasets:
+    for v in vers:
+      ndf["full/" + v] = df['full_latest.' + v] / (df['all'] - df['443_refused']) * 100
+      ndf["SH/" + v] = (df['full_preferred_over_sh_latest.' + v] - df['full_latest.' + v]) / (df['all'] - df['443_refused']) * 100
 
 
-  nonnullCols = (ndf != 0).any(axis=0)
-  foundVers = [x.split('/',1)[1] for x in nonnullCols[nonnullCols].index]
-  ndf = ndf.loc[:, nonnullCols]
-  style = []
-  for col in ndf.columns:
-    if col.startswith("full/"):
-      style.append(StackedType.Filled)
-    elif col.startswith("SH/"):
-      style.append(StackedType.HatchedAndStroked)
-    else:
-      raise NameError("Neither full nor SH: {}".format(col[0]))
-  colors = [DraftInfo[ver]['color'] for ver in foundVers]
+    nonnullCols = (ndf != 0).any(axis=0)
+    foundVers = [x.split('/',1)[1] for x in nonnullCols[nonnullCols].index]
+    ndf = ndf.loc[:, nonnullCols]
+    style = []
+    for col in ndf.columns:
+      if col.startswith("full/"):
+        style.append(StackedType.Filled)
+      elif col.startswith("SH/"):
+        style.append(StackedType.HatchedAndStroked)
+      else:
+        raise NameError("Neither full nor SH: {}".format(col[0]))
+    colors = [DraftInfo[ver]['color'] for ver in foundVers]
 
-  fig, ax = plt.subplots(1, 1)
+    if not ndf.empty:
+      axis = axes[index][0]
+      ndf.plot.area(ax = axis, legend=True, color=colors, linewidth=0, fontsize=15, stacked=True, figsize=(fig_width / dtp_per_inch, fig_height / dtp_per_inch))
+      configStacks(axis.collections, foundVers, style)
 
-  if not ndf.empty:
-    ndf.plot.area(ax = ax, legend=True, color=colors, linewidth=0, fontsize=15, stacked=True)
-    configStacks(ax.collections, foundVers, style)
+    pd.set_option('display.max_columns', 1000)
+    if len(datasets) == 1:
+      print(ndf)
 
-  pd.set_option('display.max_columns', 1000)
-  print(ndf)
-  xticks_positions = ndf.index
+  xticks_positions = ndf1.index
   xticks_labels = [p.strftime('%Y-%m') for p in xticks_positions]
-  ax.set_xticks(xticks_positions)
-  ax.set_xticklabels(xticks_labels,
-    horizontalalignment='right',  # 'center',
-    verticalalignment='top', # baseline
-    rotation=60,
-    usetex=False
-    )
-  xticks_label_offset = 0.03
-  for xtl in ax.get_xticklabels():
-    xtl.set_y(xtl.get_position()[1] - xticks_label_offset)
-  ax.set_xticks([], minor=True)
+  for axis, axis_id in axes:
+    axis.set_xticks(xticks_positions)
+    axis.set_xticklabels(xticks_labels,
+      # see https://matplotlib.org/3.1.1/gallery/text_labels_and_annotations/demo_text_rotation_mode.html
+      horizontalalignment='right',  # 'center', 'right', 'left'
+      verticalalignment='center', # 'baseline', 'top', 'bottom'
+      rotation_mode='anchor', # 'default', 'anchor'
+      rotation=60,
+      usetex=True,
+      fontfamily='serif',
+      fontname='Times',
+      )
+    xticks_label_offset = 0.00
+    if args.basedirtwo:
+      xticks_label_offset = 0.00
+    for xtl in axis.get_xticklabels():
+      xtl.set_y(xtl.get_position()[1] - xticks_label_offset)
+    axis.set_xticks([], minor=True)
 
-  ax.yaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%d'))
+    axis.yaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%d'))
 
-  # ax.set_title("{}".format(domain_list.lstrip('_')), pad=30)
-  ax.set_xlabel("")
-  ax.set_ylabel("Percent connections per month", fontsize=15)
-  if args.nonfixedylimit:
-    ax.set_ylim([None, min(119, ax.get_ylim()[1]*1.25)]) # AS plots
-  else:
-    ax.set_ylim([None, 19]) # DNS zone plots
-  ax.set_xlim([pd.Timestamp(2017, 10, 1, 0, 0), pd.Timestamp(2019, 4, 1, 0, 0)])
+    # ax.set_title("{}".format(domain_list.lstrip('_')), pad=30)
+    axis.set_xlabel("")
+    ylabel = "Percent of domains"
+    if args.basedirtwo:
+      if axis_id == 0:
+        axis.set_ylabel(ylabel, fontsize=15, horizontalalignment='right', usetex=True, fontfamily='serif', fontname='Times')
+    else:
+      axis.set_ylabel(ylabel, fontsize=15, usetex=True, fontfamily='serif', fontname='Times')
+    if args.nonfixedylimit:
+      y_max = axis.get_ylim()[1] * 1.25
+      if y_max > 100:
+        y_max = 129
+      axis.set_ylim([None, y_max]) # AS plots
+    else:
+      axis.set_ylim([None, 23]) # DNS zone plots
+
+  # Do not show y-ticks for values bigger than 100%
+    if axis.get_ylim()[1] > 100:
+      yticks_positions = axis.get_yticks()
+      index = 0
+      for ytick in yticks_positions:
+        if ytick > 100.0:
+          yticks_positions = np.delete(yticks_positions, range(index, len(yticks_positions)))
+          break
+        index += 1
+      axis.set_yticks(yticks_positions)
+
+    axis.set_xlim([pd.Timestamp(2017, 10, 1, 0, 0), pd.Timestamp(2019, 4, 1, 0, 0)])
+
+    # for tick in axis.get_xticklabels():
+    #   tick.set_fontfamily('serif')
+    #   tick.set_fontname('Times')
+    #   tick.set_usetex(True)
+    for tick in axis.get_yticklabels():
+      # print(tick.get_family())
+      # print(tick.get_fontname())
+      # print(tick.get_font_properties())
+      tick.set_fontfamily('serif')
+      tick.set_fontname('Times')
+      tick.set_usetex(True)
 
   params = {'backend': 'ps',
             # 'axes.labelsize': 20, # fontsize for x and y labels (was 10)
@@ -180,35 +254,42 @@ def genPlot_single(path, domain_list, args):
             # that uses LaTeX subscript, e.g., 'x_1'
             # https://stackoverflow.com/questions/40424249/vertical-alignment-of-matplotlib-legend-labels-with-latex-math
             # 'text.latex.preview': True,
-            'figure.figsize': [fig_width, fig_height],
+            'hatch.linewidth': hatch_linewidth,
+            # 'figure.figsize': [fig_width, fig_height],
             'font.family': 'serif',
+            # 'font.sans-serif': 'Comic Sans MS',
             'font.serif': 'Times'
   }
   mpl.rcParams.update(params)
 
-  fig.subplots_adjust(left=0.11)
-  fig.subplots_adjust(bottom=0.18)
-  fig.subplots_adjust(right=0.96)
-  fig.subplots_adjust(top=0.88)
+  fig.subplots_adjust(left=0.105)
+  fig.subplots_adjust(bottom=0.165)
+  fig.subplots_adjust(right=0.99)
+  fig.subplots_adjust(top=0.80)
 
-  handles, labels = ax.get_legend_handles_labels()
-  handles_filtered = []
-  labels_filtered = []
-  while len(labels):
-    label = labels.pop(0)
-    handle = handles.pop(0)
+  handles_filtered, labels_filtered = (None, None)
+  for axis, axis_id in axes:
+    handles, labels = axis.get_legend_handles_labels()
+    handles_filtered = []
+    labels_filtered = []
+    while len(labels):
+      label = labels.pop(0)
+      handle = handles.pop(0)
 
-    # make all handles non-hatched; don't change the original as it has influence on the plotting
-    handle = copy.copy(handle)
-    handle.set_hatch(None)
-    handle.set_color(handle.get_ec())
+      # make all handles non-hatched; don't change the original as it has influence on the plotting
+      handle = copy.copy(handle)
+      handle.set_hatch(None)
+      handle.set_color(handle.get_ec())
 
-    label = label.split('/',1)[1] # strip of full / SH type
-    if label not in labels_filtered:
-      labels_filtered.append(label)
-      handles_filtered.append(handle)
+      label = label.split('/',1)[1] # strip of full / SH type
+      if label not in labels_filtered:
+        labels_filtered.append(label)
+        handles_filtered.append(handle)
+      if axis.get_legend():
+        axis.get_legend().remove()
   legend_ncols = 2
-  legend = ax.legend(
+  legend_ax = axes[0][0]
+  legend = legend_ax.legend(
         handles_filtered,
         labels_filtered,
         loc='upper left',
@@ -227,7 +308,36 @@ def genPlot_single(path, domain_list, args):
   vers_to_annotate.remove('TLSv1.3draft25')
   vers_to_annotate.remove('TLSv1.3draft26')
   vers_to_annotate.remove('TLSv1.3draft27')
-  annotations.add(plt.gcf(), ax, vers_to_annotate)
+  for axis, axis_id in axes:
+    draw_verticals_only = True if axis_id != 0 else False
+    timebar_name_yoffset=0.02
+    if args.basedirtwo:
+      timebar_name_yoffset=0.04
+    annotations.add(plt.gcf(), axis, vers_to_annotate, draw_verticals_only=draw_verticals_only, timebar_name_yoffset=timebar_name_yoffset)
+
+    if args.basedirtwo:
+      # Add a name for the dataset to the axis area
+      dataset_name = datasets[axis_id][3]
+      dataset_name = dataset_name_to_label[dataset_name] if dataset_name in dataset_name_to_label else dataset_name
+      dataset_name = dataset_name.replace('_', '\\_')
+      # set the background s.t. we can position the text in the vertical center of the box
+      bg_color = '1.0'
+      x_coord = 0.977
+      y_coord = 0.7825
+      axis.annotate(dataset_name, xy=(x_coord, y_coord), xycoords=axis.transAxes,
+        fontsize=15,
+        horizontalalignment='right',
+        verticalalignment='bottom',
+        color=bg_color,
+        # bbox=dict(facecolor=tb['color'], edgecolor='none', pad=0.2, boxstyle='round')
+        bbox=dict(facecolor='1.0', edgecolor='0.0', boxstyle='round')
+        )
+      # add the text
+      axis.annotate(dataset_name, xy=(x_coord, y_coord - 0.015), xycoords=axis.transAxes,
+        fontsize=15,
+        horizontalalignment='right',
+        verticalalignment='bottom',
+        )
 
   return fig
 
@@ -278,7 +388,7 @@ def genPlot_separate(path, domain_list, args):
       annotations.add(plt.gcf(), ax, foundVers)
 
     ax.set_title("{} ({})".format(axpre['pre'].lstrip('_'), domain_list.lstrip('_')), pad=30)
-    ax.set_ylabel("Percent connections per month".format())
+    ax.set_ylabel("Percent of domains".format())
 
   y_lim_max = max([(axpre['ax'].get_ylim()[1] if axpre['pre'] not in ['all'] else 0) for axpre in axpres])
   for axpre in axpres:
@@ -300,7 +410,8 @@ def genPlot_separate(path, domain_list, args):
             # that uses LaTeX subscript, e.g., 'x_1'
             # https://stackoverflow.com/questions/40424249/vertical-alignment-of-matplotlib-legend-labels-with-latex-math
             # 'text.latex.preview': True,
-            'figure.figsize': [fig_width * ncols, fig_height * nrows],
+            'hatch.linewidth': hatch_linewidth,
+            # 'figure.figsize': [fig_width * ncols, fig_height * nrows],
             'font.family': 'serif',
             'font.serif': 'Times'
   }
@@ -321,9 +432,13 @@ if __name__== "__main__":
   parser.add_argument('--separate', action='store_true', default=False, help='print separately')
   parser.add_argument('--tls12', action='store_true', default=False, help='include TLS 1.2 in plot')
   parser.add_argument('--nonfixedylimit', action='store_true', default=False, help='include TLS 1.2 in plot')
+  parser.add_argument('--basedirtwo', help='Second base dir to search files within')
   args = parser.parse_args()
   if args.basedir:
-    domain_list = args.basedir.split('/')[-1]
+    domain_list = args.basedir.rstrip('/').split('/')[-1]
+    domain_list_two = None
+    if args.basedirtwo:
+      domain_list_two = args.basedirtwo.rstrip('/').split('/')[-1]
 
     if args.separate:
       fig = genPlot_separate(args.basedir, domain_list, args)
@@ -332,4 +447,7 @@ if __name__== "__main__":
     else:
       fig = genPlot_single(args.basedir, domain_list, args)
       # plt.show()
-      fig.savefig('plot_{}_single.pdf'.format(domain_list))
+      fig_file = 'plot_{}_single.pdf'.format(domain_list)
+      if args.basedirtwo:
+        fig_file = 'plot_{}_{}_single.pdf'.format(domain_list, domain_list_two)
+      fig.savefig(fig_file)

@@ -1,0 +1,37 @@
+The input is the result of our DNS-based active Internet Observatory which is described here:
+Oliver Hohlfeld. 2018. Operating a DNS-based Active Internet Observatory. In Proceedings of the ACM SIGCOMM 2018 Conference on Posters and Demos (SIGCOMM '18). Association for Computing Machinery, New York, NY, USA, 60–62. DOI:https://doi.org/10.1145/3234200.3234239
+
+{
+  "comsys-source": "testinput",    # We use this to identify the zone, e.g., using alexa-A-www or com-A-www
+  "comsys-date": "2000-01-01",    # day when we received the domain from one of our domain sources
+  "altered_name": "www.exampledomain.localhost",    # altered domain name as used for DNS query
+  "name": "exampledomain.localhost",    # domain name as received from domain source
+  "class": "IN",
+  "status": "NOERROR",    # status information for DNS query
+  "timestamp": "2000-01-01T00:00:00+00:00",    # timestamp of DNS resolution
+  "data": {    # data provided by our DNS resolver infrastructure
+    "answers": [    # contains the results of dns queries
+      {
+        "ttl": 300,
+        "type": "A",
+        "class": "IN",
+        "name": "www.exampledomain.localhost",
+        "answer": "127.0.0.1"
+      }
+    ],
+    "additionals": [],    # not relevant for tls 1.3 scans
+    "authorities": [],    # not relevant for tls 1.3 scans
+    "protocol": "udp",    # not relevant for tls 1.3 scans
+    "flags": {    # not relevant for tls 1.3 scans
+      "response": true,
+      "opcode": 0,
+      "authoritative": false,
+      "truncated": false,
+      "recursion_desired": true,
+      "recursion_available": true,
+      "authenticated": false,
+      "checking_disabled": false,
+      "error_code": 0
+    }
+  }
+}
