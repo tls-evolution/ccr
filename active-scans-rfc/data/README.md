@@ -2,23 +2,13 @@
 
 Please note that you will need to unzip the files before you can run any analysis scripts.
 
-## Warning - read first
-
 Several files are extremely large - noteably the pcaps that hold (literally)
 entire scans. For this reason, we offer only one pcap for direct download,
 although all can be requested directly from us (via anonymous mail is fine).
 
-Due to the costs for CDN and cloud storage, from 2020-04-13 we switch back to
-hosting the files ourselves. This may result in longer download times. If you
-are in urgent need of a particular file, let us know and we'll check options
-how to get it to you faster.
-
-The files are now hosted on the same machine that also does the scanning. The
-drawback is that we will deactivate the HTTP server for downloads. A scan takes
-5-7 days. If you are in urgent need of a file, let us know and we'll set up a
-separate webserver for you.
-
 ## Links to data
+
+[Link to repository](https://dx.doi.org/10.25606/SURF.ec84cf2afb7e9096)
 
 ### 2019-05
 
