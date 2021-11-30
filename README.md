@@ -3,6 +3,9 @@ Reproducibility instructions for CCR paper on TLS 1.3 evolution
 
 We apologise for the need to distribute data sets and tools across several locations and repositories. Data is generally too large to store centrally, but we will endeavor to honor any reviewer request for transfer of larger chunks of data. Tools are often developed inside their own repositories; we link to these.
 
+## Citation
+Ralph Holz, Jens Hiller, Johanna Amann, Abbas Razaghpanah, Thomas Jost, Narseo Vallina-Rodriguez, and Oliver Hohlfeld. SIGCOMM Comput. Commun. Rev., 50(3). DOI: https://doi.org/10.1145/3411740.3411742
+
 ## Data sets and measurement tools
 
 ### Preparation
