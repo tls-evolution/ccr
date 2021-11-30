@@ -35,16 +35,16 @@ Full pcap:
 ### 2019-06
 
 Input
-- [Alexa](https://tls13-downloads.globalsecuritylabs.org:443/active-scans/outputs/2019-06/1559534698_alexa.domain.sortu+2ld.csv.gz) (5MB)
-- [CNO](https://tls13-downloads.globalsecuritylabs.org:443/active-scans/outputs/2019-06/1559534698_cno.domain.sortu.csv.gz) (607MB)
-- [ccTLD](https://tls13-downloads.globalsecuritylabs.org:443/active-scans/outputs/2019-06/1559273373_cctld.domain.sortu+2ld.csv.gz) (326MB)
-- [ngTLD](https://tls13-downloads.globalsecuritylabs.org:443/active-scans/outputs/2019-06/1559534698_czdsnonet.domain.sortu.csv.gz) (97MB)
+- [Alexa](https://hdl.handle.net/11112/DBE20C74-D82C-475B-BB4D-D69F4D5A2BCB) (5MB)
+- [CNO](https://hdl.handle.net/11112/E70943ED-6F08-4963-830D-B7E95A38D280) (607MB)
+- [ccTLD](https://hdl.handle.net/11112/EAF7E770-DBAF-4D19-8B04-B3480BBAED12) (326MB)
+- [ngTLD](https://hdl.handle.net/11112/D7662292-9817-4AE5-AA13-3F962C8ACC15) (97MB)
 
 Output
-- [Alexa hosts](https://tls13-downloads.globalsecuritylabs.org:443/active-scans/outputs/2019-06/1559534698_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (20MB)
-- [CNO hosts](https://tls13-downloads.globalsecuritylabs.org:443/active-scans/outputs/2019-06/1559534698_cno.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (1.8GB)
-- [ccTLD hosts](https://tls13-downloads.globalsecuritylabs.org:443/active-scans/outputs/2019-06/1559273373_cctld.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (759MB)
-- [ngTLD hosts](https://tls13-downloads.globalsecuritylabs.org:443/active-scans/outputs/2019-06/1559534698_czdsnonet.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (159MB)
+- [Alexa hosts](https://hdl.handle.net/11112/C986BAA6-31C4-494C-98A3-2044588FB244) (20MB)
+- [CNO hosts](https://hdl.handle.net/11112/173D9C04-1BF7-48FD-877F-84046CE3252D) (1.8GB)
+- [ccTLD hosts](https://hdl.handle.net/11112/C6E734EF-0FA2-4AAE-8349-31F97499E4D0) (759MB)
+- [ngTLD hosts](https://hdl.handle.net/11112/90C7FDCA-C0CD-4185-90DF-689ED57DE082) (159MB)
 
 ### 2019-07
 
