@@ -58,7 +58,7 @@ Output
 - [Alexa hosts](https://hdl.handle.net/11112/50109A28-07D1-472D-98A7-9D00F49FE403) (20MB)
 - [Alexa domain categorized](https://hdl.handle.net/11112/BEB799E6-FDAE-4A95-BC2F-AAEA4988F829) (1MB)
 - [CNO hosts](https://hdl.handle.net/11112/BDA8B53A-B35C-46B1-B295-0CFA756B3CDB) (1.8GB)
-- [ccTLD hosts](https://hdl.handle.net/11112/04FBDE41-7C86-4758-BBBA-31A85FBDD2DD)
+- [ccTLD hosts](https://hdl.handle.net/11112/04FBDE41-7C86-4758-BBBA-31A85FBDD2DD) (764MB)
 - [ngTLD hosts](https://hdl.handle.net/11112/75065782-925D-41B8-BF23-735F2F7FBB1A) (164MB)
 
 ### 2019-08
