@@ -49,17 +49,17 @@ Output
 ### 2019-07
 
 Input
-- [Alexa](https://tls13-downloads.globalsecuritylabs.org:443/active-scans/outputs/2019-07/1562135339_alexa.domain.sortu+2ld.csv.gz) (5MB)
-- [CNO](https://tls13-downloads.globalsecuritylabs.org:443/active-scans/outputs/2019-07/1562135339_cno.domain.sortu.csv.gz) (609MB)
-- [ccTLD](https://tls13-downloads.globalsecuritylabs.org:443/active-scans/outputs/2019-07/1562135339_cctld.domain.sortu+2ld.csv.gz) (326MB)
-- [ngTLD](https://tls13-downloads.globalsecuritylabs.org:443/active-scans/outputs/2019-07/1562135339_czdsnonet.domain.sortu.csv.gz) (98MB)
+- [Alexa](https://hdl.handle.net/11112/C174DC8F-B488-4C25-B0C3-1A04BDCF1A8A) (5MB)
+- [CNO](https://hdl.handle.net/11112/43268A63-D77C-4CC6-949B-0F7F12406790) (609MB)
+- [ccTLD](https://hdl.handle.net/11112/472BDAB8-2F3A-4A8B-A6A6-1F0B38A2FD41) (326MB)
+- [ngTLD](https://hdl.handle.net/11112/03150569-6661-44C2-820B-04DA962FEC33) (98MB)
 
 Output
-- [Alexa hosts](https://tls13-downloads.globalsecuritylabs.org:443/active-scans/outputs/2019-07/1562135339_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (20MB)
-- [Alexa domain categorized](https://tls13-downloads.globalsecuritylabs.org:443/active-scans/outputs/2019-07/1562135339_alexa.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.top.100000.vtmapped.csv.gz) (1MB)
-- [CNO hosts](https://tls13-downloads.globalsecuritylabs.org:443/active-scans/outputs/2019-07/1562135339_cno.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (1.8GB)
-- [ccTLD hosts](https://tls13-downloads.globalsecuritylabs.org:443/active-scans/outputs/2019-07/1562135339_cctld.domain.sortu+2ld.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz)
-- [ngTLD hosts](https://tls13-downloads.globalsecuritylabs.org:443/active-scans/outputs/2019-07/1562135339_czdsnonet.domain.sortu.csv.massdns.onlyrr.ipdomain.wlip.wldomains.prefixed.sortu.shuf.zmap.ip.sortu.joined.goscanner.hosts.csv.gz) (164MB)
+- [Alexa hosts](https://hdl.handle.net/11112/50109A28-07D1-472D-98A7-9D00F49FE403) (20MB)
+- [Alexa domain categorized](https://hdl.handle.net/11112/BEB799E6-FDAE-4A95-BC2F-AAEA4988F829) (1MB)
+- [CNO hosts](https://hdl.handle.net/11112/BDA8B53A-B35C-46B1-B295-0CFA756B3CDB) (1.8GB)
+- [ccTLD hosts](https://hdl.handle.net/11112/04FBDE41-7C86-4758-BBBA-31A85FBDD2DD)
+- [ngTLD hosts](https://hdl.handle.net/11112/75065782-925D-41B8-BF23-735F2F7FBB1A) (164MB)
 
 ### 2019-08
 
