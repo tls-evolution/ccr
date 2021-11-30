@@ -6,6 +6,9 @@ Several files are extremely large - noteably the pcaps that hold (literally)
 entire scans. For this reason, we offer only one pcap for direct download,
 although all can be requested directly from us (via anonymous mail is fine).
 
+## Citation
+Ralph Holz, Jens Hiller, Johanna Amann, Abbas Razaghpanah, Thomas Jost, Narseo Vallina-Rodriguez, and Oliver Hohlfeld. SIGCOMM Comput. Commun. Rev., 50(3). DOI: https://doi.org/10.1145/3411740.3411742
+
 ## Links to data
 
 [Link to repository](https://dx.doi.org/10.25606/SURF.ec84cf2afb7e9096)
