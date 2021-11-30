@@ -19,7 +19,7 @@ Our usage of our modified zgrab scanner for the scanning of TLS 1.3 draft suppor
 
 Our RFC-based scanner is published in this [repository](https://github.com/tls-evolution/goscanner). We provide the scripts to run the scans in the directory `active-scans/run-scans/` in this repo.
 
-Our data sets are massive - we upload these into a DigitalOcean space. We are currently offering the output data for all our scans, but the PCAPs for just 2019-05 because they need 0.5TB storage.
+Our data sets are massive. We are currently offering the output data for all our scans, but the PCAPs for just 2019-05 because they need 0.5TB storage alone.
 We are happy to offer all PCAPs via direct transfer if requested.
 
 ### Passive monitoring
